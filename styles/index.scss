@@ -1,0 +1,6 @@
+@use '_variables' as v;
+@use '_importer';
+
+body {
+    background-color: v.$blue_color;
+}
