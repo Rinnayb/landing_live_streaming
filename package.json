@@ -15,9 +15,12 @@
   "type": "commonjs",
   "source": "index.html",
   "scripts": {
-    "sass:watch": "sass --style=expanded --watch styles:dist"
+    "sass:watch": "sass --style=expanded --watch styles:dist",
+    "parcel:watch": "parcel serve --dist-dir public",
+    "parcel:build": "parcel build --dist-dir build --public-url ./"
   },
   "devDependencies": {
+    "baseline-browser-mapping": "^2.9.14",
     "parcel": "^2.16.1",
     "sass": "^1.94.0"
   }
