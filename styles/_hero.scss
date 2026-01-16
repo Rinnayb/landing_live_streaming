@@ -1,0 +1,87 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.hero {
+    position: relative;
+    max-width: 1260px;
+    height: 810px;
+    margin: 0 auto;
+    padding: 140px 0 0 0;
+    background: url('../assets/img/cloud_alpha.png') center/contain no-repeat;
+
+    &__content {
+        position: relative;
+        width: 930px;
+        margin: 0 auto;
+
+        .hero__title {
+            @include m.font(120px, 700, v.$color_black);
+            line-height: 100%;
+        }
+
+        .hero__action-btn {
+            width: 380px;
+            height: 80px;
+            background-color: v.$color_black;
+            border-radius: 40px;
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            @include m.font(28px, 500, v.$color_white);
+            @include m.position(absolute, 1, -1, bottom, right, 20px, 0);
+
+            &:hover {
+                background-color: color.adjust(v.$color_black, $alpha: -0.35);
+            }
+
+            // &:focus {
+            //     outline: none;
+            // }
+
+            &:focus-visible {
+                outline: 2px solid v.$color_white;
+            }
+        }
+    }
+
+    &__notify {
+        position: relative;
+        margin: 170px auto 0;
+        width: 680px;
+        height: 70px;
+        background-color: color.adjust(v.$color_white, $alpha: -0.9);
+        border-radius: 20px;
+        @include m.d-flex(right, center, nowrap, row, 10px, );
+
+        &-img {
+            @include m.position(absolute, 1, -1, top, left, -75px, -35px);
+
+        }
+
+        &-content {
+            width: 450px;
+            height: 100%;
+            @include m.d-flex(center, center, nowrap, column, 0, 0);
+            @include m.font(14px, 400, v.$color_black);
+            border-right: 1px solid v.$color_white;
+            line-height: 100%;
+        }
+
+        &-btn {
+            width: 115px;
+            background: none;
+            border: none;
+            text-transform: uppercase;
+            @include m.font(25px, 400, v.$color_black);
+            @extend %hover-white;
+
+            &:focus-visible {
+                outline: 2px solid v.$color_white;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}
