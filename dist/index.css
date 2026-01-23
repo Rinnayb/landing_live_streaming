@@ -1134,6 +1134,17 @@ li {
   }
 }
 
+.form-section__bg-cloud {
+  width: 700px;
+  height: 240px;
+  background: url("../assets/img/cloud_alpha.png") center/contain no-repeat;
+}
+
+.form-section {
+  padding-top: 330px;
+  position: relative;
+  overflow: hidden;
+}
 body {
   background-color: #678ff2;
 }
