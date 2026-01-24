@@ -15,9 +15,16 @@ h5,
 h6,
 ul,
 p,
-button {
+button,
+figure,
+hr,
+blockquote {
     margin: 0;
     padding: 0;
+}
+
+hr {
+    width: 100%;
 }
 
 a {
