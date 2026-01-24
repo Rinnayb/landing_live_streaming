@@ -265,22 +265,26 @@
         <section class="form-section">
             <div class="container">
                 <div class="form-section__wrapper">
-                    <form action="mailto:streaming_company@mail.ru" class="contact-form" aria-labelledby="contact-form-title">
+                    <form class="contact-form" action="mailto:streaming_company@mail.ru"
+                        aria-labelledby="contact-form-title">
                         <label class="contact-form__title" id="contact-form-title" for="input-name">Ready to get
                             started? Drop us a line!</label>
-                        <input id="input-name" type="text" placeholder="Name" class="contact-form__name"
-                            aria-required="true" required>
-                        <input id="input-email" type="email" placeholder="Email" class="contact-form__email"
-                            aria-required="true" required>
+                        <input id="input-name" type="text" placeholder="Name"
+                            class="contact-form__input" name="firstname" aria-required="true"
+                            autocomplete="name">
+                        <input id="input-email" type="email" placeholder="Email"
+                            class="contact-form__input" name="email" aria-required="true"
+                            autocomplete="name" required>
                         <input id="input-text" type="text" placeholder="What we can do for you?"
-                            class="contact-form__text" aria-required="true" required>
+                            class="contact-form__input" name="message" aria-required="true"
+                            autocomplete="off" required>
                         <button type="submit" class="contact-form__submit-btn">Send</button>
                     </form>
                 </div>
             </div>
 
-            <div class="form-section__bg-cloud cloud--left"></div>
-            <div class="form-section__bg-cloud cloud--right"></div>
+            <div class="form-section__bg-cloud form-section__bg-cloud--left"></div>
+            <div class="form-section__bg-cloud form-section__bg-cloud--right"></div>
         </section>
         <!-- /.form-section -->
     </main>
