@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -17,7 +21,8 @@ ul,
 p,
 button,
 figure,
-hr {
+hr,
+blockquote {
     margin: 0;
     padding: 0;
 }
